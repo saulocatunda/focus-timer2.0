@@ -1,8 +1,8 @@
 export default function () {
-  const florestSound = new Audio('/stage5/focus-timer2.0/audios/Floresta.wav')
-  const cloudSound = new Audio('/stage5/focus-timer2.0/audios/Chuva.wav')
-  const fireSound = new Audio('/stage5/focus-timer2.0/audios/Lareira.wav')
-  const storeSound = new Audio('/stage5/focus-timer2.0/audios/Cafeteria.wav')
+  const florestSound = new Audio('/audios/Floresta.wav')
+  const cloudSound = new Audio('/audios/Chuva.wav')
+  const fireSound = new Audio('/audios/Lareira.wav')
+  const storeSound = new Audio('/audios/Cafeteria.wav')
 
   function pause() {
     florestSound.pause()

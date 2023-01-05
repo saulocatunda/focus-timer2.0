@@ -3,13 +3,13 @@ export default function () {
     'https://github.com/saulocatunda/focus-timer2.0/blob/main/assets/audios/Floresta.mp3?raw=true'
   )
   const cloudSound = new Audio(
-    'https://github.com/saulocatunda/focus-timer2.0/blob/main/assets/audios/Chuva.mp3'
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/assets/audios/Chuva.mp3?raw=true'
   )
   const fireSound = new Audio(
-    '/assets/audios/Lareira.mp3'
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/assets/audios/Lareira.mp3?raw=true'
   )
   const storeSound = new Audio(
-    'assets/audios/Lareira.mp3'
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/assets/audios/Cafeteria.mp3?raw=true'
   )
 
   function pause() {

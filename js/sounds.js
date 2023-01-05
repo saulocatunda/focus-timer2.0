@@ -1,8 +1,16 @@
 export default function () {
-  const florestSound = new Audio('/audios/Floresta.wav')
-  const cloudSound = new Audio('/audios/Chuva.wav')
-  const fireSound = new Audio('/audios/Lareira.wav')
-  const storeSound = new Audio('/audios/Cafeteria.wav')
+  const florestSound = new Audio(
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/audios/Floresta.wav?raw=true'
+  )
+  const cloudSound = new Audio(
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/audios/Chuva.wav?raw=true'
+  )
+  const fireSound = new Audio(
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/audios/Lareira.wav?raw=true'
+  )
+  const storeSound = new Audio(
+    'https://github.com/saulocatunda/focus-timer2.0/blob/main/audios/Cafeteria.wav?raw=true'
+  )
 
   function pause() {
     florestSound.pause()

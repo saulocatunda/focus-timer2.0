@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-color: #323238;
+  --card-bg-color: #e1e1e6;
+  --card-bg-color-cloud: rgb(71, 199, 238, 0.8);
+  --card-bg-color-fire: rgba(231, 111, 81, 0.836);
+  --card-bg-color-store: rgba(234, 243, 113, 0.808);
+  --card-bg-color-florest: rgba(83, 228, 131, 0.774);
+  --card-shadow-color: rgb(202, 202, 202);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: clamp(10rem, 10rem + 10vw, 20rem);
+}
+
+.hide {
+  opacity: 0;
+  display: none;
+}
+
+.timer span {
+  /* font-size: 12.6rem; */
+  font-size: calc(8vw + 5vh);
+  line-height: 15rem;
+  color: var(--text-color);
+}
+
+
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col-1,
+.col-2 {
+  display: flex;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  width: 14rem;
+  height: 15rem;
+  margin: 0 0 3.2rem 3.2rem;
+  border-radius: 2.4rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.florest:hover {
+  background-color: var(--card-bg-color-florest);
+  transition: 0.5s;
+}
+
+.fire:hover {
+  background-color: var(--card-bg-color-fire);
+  transition: 0.5s;
+}
+
+.store:hover {
+  background-color: var(--card-bg-color-store);
+  transition: 0.5s;
+}
+
+.cloud:hover {
+  background-color: var(--card-bg-color-cloud);
+  transition: 0.5s;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sounds .card:active {
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 0 1rem var(--card-shadow-color) inset,
+    0 0 1rem 0.5rem var(--card-shadow-color);
+}
+
+button:active {
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 0 1rem var(--card-shadow-color) inset,
+    0 0 1rem 0.5rem var(--card-shadow-color);
+  border-radius: 9999px;
+}
+
+.sounds .card img:hover {
+  animation: shake 0.7s ease-in-out;
+}
+.sounds .card img:active {
+  animation: desapier 0.1s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes desapier {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    opacity: 0.5;
+  }
+  76% {
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}

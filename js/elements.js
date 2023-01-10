@@ -9,6 +9,8 @@ const buttonTree = document.querySelector('.florest')
 const buttonFire = document.querySelector('.fire')
 const buttonStore = document.querySelector('.store')
 const buttonCloud = document.querySelector('.cloud')
+const buttonToggleTheme = document.querySelector('.toggle-theme')
+const bodyTheme = document.querySelector('body')
 
 export {
   buttonPlay,
@@ -21,5 +23,7 @@ export {
   buttonStore,
   buttonTree,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  buttonToggleTheme,
+  bodyTheme
 }

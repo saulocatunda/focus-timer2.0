@@ -13,7 +13,9 @@ import {
   buttonStore,
   buttonTree,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  bodyTheme,
+  buttonToggleTheme
 } from './elements.js'
 
 const sounds = Sounds()

@@ -6,12 +6,14 @@
 
 :root {
   font-size: 62.5%;
-  --text-color: #323238;
+  --textBlack-color: #323238;
+  --textWhite-color: #ffffff;
   --card-bg-color: #e1e1e6;
-  --card-bg-color-cloud: rgb(71, 199, 238, 0.8);
-  --card-bg-color-fire: rgba(231, 111, 81, 0.836);
-  --card-bg-color-store: rgba(234, 243, 113, 0.808);
-  --card-bg-color-florest: rgba(83, 228, 131, 0.774);
+  --card-bg-colorDark: #29292e;
+  --card-bg-color-cloud: rgba(0, 134, 175, 0.8);
+  --card-bg-color-fire: rgba(180, 36, 0, 0.836);
+  --card-bg-color-store: rgba(181, 194, 0, 0.808);
+  --card-bg-color-florest: rgba(0, 192, 64, 0.774);
   --card-shadow-color: rgb(202, 202, 202);
 }
 
@@ -19,13 +21,20 @@ body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
+  background-color: white;
+}
+
+.toggle-theme {
+  display: flex;
+  justify-content: end;
+  margin: 6rem 6rem 0 0;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   gap: clamp(10rem, 10rem + 10vw, 20rem);
 }
 
@@ -38,10 +47,8 @@ main {
   /* font-size: 12.6rem; */
   font-size: calc(8vw + 5vh);
   line-height: 15rem;
-  color: var(--text-color);
+  color: var(--textBlack-color);
 }
-
-
 
 .controls {
   display: flex;
@@ -53,33 +60,33 @@ main {
   display: flex;
 }
 
-.card {
+.sounds .card {
   background-color: var(--card-bg-color);
   width: 14rem;
   height: 15rem;
   margin: 0 0 3.2rem 3.2rem;
   border-radius: 2.4rem;
   display: grid;
-  place-content: center;
+  place-content: space-evenly;
   cursor: pointer;
 }
 
-.florest:hover {
+.sounds .florest:hover {
   background-color: var(--card-bg-color-florest);
   transition: 0.5s;
 }
 
-.fire:hover {
+.sounds .fire:hover {
   background-color: var(--card-bg-color-fire);
   transition: 0.5s;
 }
 
-.store:hover {
+.sounds .store:hover {
   background-color: var(--card-bg-color-store);
   transition: 0.5s;
 }
 
-.cloud:hover {
+.sounds .cloud:hover {
   background-color: var(--card-bg-color-cloud);
   transition: 0.5s;
 }
@@ -89,6 +96,23 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+.timer button:hover {
+  box-shadow: 0 0 1rem var(--card-shadow-color) inset,
+    0 0.1rem 3rem 0.5rem var(--card-shadow-color);
+  border-radius: 22rem;
+}
+
+svg {
+  margin: auto;
+}
+
+.timer button svg {
+  fill: #323238;
+}
+
+.sounds svg {
+  fill: #323238;
+}
 
 .sounds .card:active {
   transition: 0.1s ease-in-out;
@@ -96,18 +120,64 @@ button {
     0 0 1rem 0.5rem var(--card-shadow-color);
 }
 
-button:active {
+.sounds button:active {
   transition: 0.1s ease-in-out;
   box-shadow: 0 0 1rem var(--card-shadow-color) inset,
     0 0 1rem 0.5rem var(--card-shadow-color);
   border-radius: 9999px;
 }
 
-.sounds .card img:hover {
+.sounds .card svg:hover {
   animation: shake 0.7s ease-in-out;
 }
-.sounds .card img:active {
+.sounds .card svg:active {
   animation: desapier 0.1s ease-in-out;
+}
+
+.sounds .card input[type='range'] {
+  -webkit-appearance: none;
+  width: 10rem;
+  height: 0.5rem;
+  background-color: #323238;
+  border-radius: 0.2rem;
+}
+
+.sounds .card input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #323238;
+  border-radius: 1rem;
+}
+
+/*Dark Theme*/
+
+body.darkTheme {
+  background-color: rgb(0, 0, 0);
+}
+
+body.darkTheme main.darkTheme span {
+  color: var(--textWhite-color);
+}
+
+body.darkTheme main.darkTheme button svg {
+  fill: #ffffff;
+}
+
+body.darkTheme svg {
+  fill: #ffffff;
+}
+
+body.darkTheme .card {
+  background-color: var(--card-bg-colorDark);
+}
+
+body.darkTheme .card input[type='range'] {
+  background-color: #ffffff;
+}
+
+body.darkTheme .card input[type='range']::-webkit-slider-thumb {
+  background-color: #ffffff;
 }
 
 @keyframes shake {

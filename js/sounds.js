@@ -19,26 +19,41 @@ export default function () {
     storeSound.pause()
   }
 
-  function loopAudio(typeSound) {
-    var currentAudio = typeSound.muted
-    typeSound.loop = !currentAudio
+  var currentAudio
+  var halfVolume = 0.5
+  var lastVolume
+
+  function loopAudio() {
+    currentAudio.loop = currentAudio.muted == false ? true : false
   }
 
   function florestBgSound() {
     florestSound.play()
-    loopAudio(florestSound)
+    currentAudio = florestSound
+    loopAudio()
+    volumeSetRange()
   }
+
   function cloudBgSound() {
     cloudSound.play()
-    loopAudio(cloudSound)
+    currentAudio = cloudSound
+    loopAudio()
   }
+
   function fireBgSound() {
     fireSound.play()
-    loopAudio(fireSound)
+    currentAudio = fireSound
+    loopAudio()
   }
+
   function storeBgSound() {
     storeSound.play()
-    loopAudio(storeSound)
+    currentAudio = storeSound
+    loopAudio()
+  }
+
+  function volumeSetRange(volumeSet) {
+// CRIAR LÓGICA
   }
 
   return {
@@ -46,6 +61,7 @@ export default function () {
     cloudBgSound,
     fireBgSound,
     storeBgSound,
-    pause
+    pause,
+    volumeSetRange
   }
 }

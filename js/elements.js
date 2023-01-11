@@ -9,8 +9,13 @@ const buttonTree = document.querySelector('.florest')
 const buttonFire = document.querySelector('.fire')
 const buttonStore = document.querySelector('.store')
 const buttonCloud = document.querySelector('.cloud')
-const buttonToggleTheme = document.querySelector('.toggle-theme')
+const buttonLightTheme = document.querySelector('.lightOn')
+const buttonDarkTheme = document.querySelector('.darkOn')
 const bodyTheme = document.querySelector('body')
+const volumeRangeFlorest = document.querySelector('#florest')
+const volumeRangeFire = document.querySelector('#fire')
+const volumeRangeStore = document.querySelector('#store')
+const volumeRangeCloud = document.querySelector('#cloud')
 
 export {
   buttonPlay,
@@ -24,6 +29,11 @@ export {
   buttonTree,
   minutesDisplay,
   secondsDisplay,
-  buttonToggleTheme,
-  bodyTheme
+  buttonLightTheme,
+  buttonDarkTheme,
+  bodyTheme,
+  volumeRangeFlorest,
+  volumeRangeFire,
+  volumeRangeStore,
+  volumeRangeCloud
 }

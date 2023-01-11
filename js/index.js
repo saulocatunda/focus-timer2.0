@@ -15,7 +15,12 @@ import {
   minutesDisplay,
   secondsDisplay,
   bodyTheme,
-  buttonToggleTheme
+  buttonLightTheme,
+  buttonDarkTheme,
+  volumeRangeFlorest,
+  volumeRangeFire,
+  volumeRangeStore,
+  volumeRangeCloud
 } from './elements.js'
 
 const sounds = Sounds()
@@ -30,7 +35,14 @@ const controls = Controls({
   buttonFire,
   buttonTree,
   buttonStore,
-  sounds
+  sounds,
+  bodyTheme,
+  buttonLightTheme,
+  buttonDarkTheme,
+  volumeRangeFlorest,
+  volumeRangeFire,
+  volumeRangeStore,
+  volumeRangeCloud
 })
 
 const timer = Timer({

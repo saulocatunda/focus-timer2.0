@@ -5,12 +5,14 @@
 > - HTML - CSS - JavaScript
 > - MD6 (Modules)
 > - Dependency Injections - Factory Method
-> - Factory
 > - CSS clamp
 > - DOM
-> - Clean Code 50%
+> - Clean Code - First Steps
 > - Refactored
 > - Sounds
 > - setTimeout()
+> - addEventListener
+> - DarkMode
+> - Volume - Range-Input (Sound)
 
 [Experimente - Clicando aqui.](https://saulocatunda.github.io/focus-timer2.0/)

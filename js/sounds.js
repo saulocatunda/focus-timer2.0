@@ -21,7 +21,6 @@ export default function () {
 
   var currentAudio
   var halfVolume = 0.5
-  var lastVolume
 
   function loopAudio() {
     currentAudio.loop = currentAudio.muted == false ? true : false
@@ -31,29 +30,32 @@ export default function () {
     florestSound.play()
     currentAudio = florestSound
     loopAudio()
-    volumeSetRange()
+    currentAudio.volume = halfVolume
   }
 
   function cloudBgSound() {
     cloudSound.play()
     currentAudio = cloudSound
     loopAudio()
+    currentAudio.volume = halfVolume
   }
 
   function fireBgSound() {
     fireSound.play()
     currentAudio = fireSound
     loopAudio()
+    currentAudio.volume = halfVolume
   }
 
   function storeBgSound() {
     storeSound.play()
     currentAudio = storeSound
     loopAudio()
+    currentAudio.volume = halfVolume
   }
 
   function volumeSetRange(volumeSet) {
-// CRIAR LÓGICA
+    currentAudio.volume = volumeSet
   }
 
   return {

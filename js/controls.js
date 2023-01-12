@@ -6,6 +6,7 @@ export default function Controls({
   buttonLightTheme,
   buttonDarkTheme
 }) {
+  var lastSelectedCard
   function play() {
     buttonPlay.classList.add('hide')
     buttonPause.classList.remove('hide')
@@ -29,17 +30,33 @@ export default function Controls({
     buttonLightTheme.classList.toggle('hide')
     buttonDarkTheme.classList.toggle('hide')
   }
+  function selectedCardReset() {
+    var verifierSelectedCard = lastSelectedCard == undefined ? false : true
+    if (verifierSelectedCard) {
+      lastSelectedCard.classList.remove('selected')
+    }
+  }
+  function selectedCard(cardSelected) {
+    cardSelected.classList.add('selected')
+    lastSelectedCard = cardSelected
+  }
 
   function volume(volumeType) {
     sounds.volumeSetRange(volumeType)
   }
 
+  function resetVolumeControl(rangeType) {
+    rangeType.valueAsNumber = 0.5
+  }
   return {
     play,
     pause,
     stop,
     reset,
     theme,
-    volume
+    volume,
+    resetVolumeControl,
+    selectedCard,
+    selectedCardReset
   }
 }

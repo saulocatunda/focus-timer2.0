@@ -25,6 +25,7 @@ export default function eventListener({ controls, timer, sounds }) {
   buttonPause.addEventListener('click', () => {
     controls.pause()
     timer.pause()
+    controls.selectedCardReset()
   })
 
   buttonStop.addEventListener('click', () => {
@@ -42,19 +43,30 @@ export default function eventListener({ controls, timer, sounds }) {
   buttonCloud.addEventListener('click', () => {
     sounds.pause()
     sounds.cloudBgSound()
-
+    controls.resetVolumeControl(volumeRangeCloud)
+    controls.selectedCardReset()
+    controls.selectedCard(buttonCloud)
   })
   buttonTree.addEventListener('click', () => {
     sounds.pause()
     sounds.florestBgSound()
+    controls.resetVolumeControl(volumeRangeFlorest)
+    controls.selectedCardReset()
+    controls.selectedCard(buttonTree)
   })
   buttonFire.addEventListener('click', () => {
     sounds.pause()
     sounds.fireBgSound()
+    controls.resetVolumeControl(volumeRangeFire)
+    controls.selectedCardReset()
+    controls.selectedCard(buttonFire)
   })
   buttonStore.addEventListener('click', () => {
     sounds.pause()
     sounds.storeBgSound()
+    controls.resetVolumeControl(volumeRangeStore)
+    controls.selectedCardReset()
+    controls.selectedCard(buttonStore)
   })
   buttonLightTheme.addEventListener('click', () => {
     controls.theme()
@@ -62,20 +74,20 @@ export default function eventListener({ controls, timer, sounds }) {
   buttonDarkTheme.addEventListener('click', () => {
     controls.theme()
   })
-  volumeRangeFlorest.addEventListener('click', () => {
-    console.log(volumeRangeFlorest.valueAsNumber)
+  volumeRangeFlorest.addEventListener('click', event => {
+    event.stopPropagation()
     controls.volume(volumeRangeFlorest.valueAsNumber)
   })
-  volumeRangeFire.addEventListener('click', () => {
-    console.log(volumeRangeFire.valueAsNumber)
+  volumeRangeFire.addEventListener('click', event => {
+    event.stopPropagation()
     controls.volume(volumeRangeFire.valueAsNumber)
   })
-  volumeRangeStore.addEventListener('click', () => {
-    console.log(volumeRangeStore.valueAsNumber)
+  volumeRangeStore.addEventListener('click', event => {
+    event.stopPropagation()
     controls.volume(volumeRangeStore.valueAsNumber)
   })
-  volumeRangeCloud.addEventListener('click', () => {
-    console.log(volumeRangeCloud.valueAsNumber)
+  volumeRangeCloud.addEventListener('click', event => {
+    event.stopPropagation()
     controls.volume(volumeRangeCloud.valueAsNumber)
   })
 }

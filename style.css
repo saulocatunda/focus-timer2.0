@@ -35,7 +35,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  gap: clamp(10rem, 10rem + 10vw, 20rem);
+  gap: 20%;
 }
 
 .hide {
@@ -150,6 +150,7 @@ svg {
 
 .sounds .card input[type='range'] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   width: 10rem;
   height: 0.5rem;
   background-color: #323238;
@@ -158,6 +159,21 @@ svg {
 
 .sounds .card input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #323238;
+  border-radius: 1rem;
+}
+
+.sounds .card input[type='range']::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #323238;
+  border-radius: 1rem;
+}
+
+.sounds .card input[type='range']::-ms-thumb {
   width: 1.5rem;
   height: 1.5rem;
   background-color: #323238;
@@ -227,5 +243,68 @@ body.darkTheme .card input[type='range']::-webkit-slider-thumb {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .toggle-theme {
+    height: clamp(2rem, 2rem + 5vh, 5rem);
+    margin: 1rem 1rem 0 0;
+  }
+
+  main {
+    display: grid;
+    height: clamp(9rem, 7rem + 10vh, 10rem);
+    justify-items: center;
+    align-items: center;
+    gap: 5%;
+  }
+
+  main span {
+    text-align: center;
+  }
+  .clock {
+    height: clamp(7rem, 5rem + 10vh, 10rem);
+  }
+  .timer {
+    text-align: center;
+  }
+  .controls {
+    gap: 3%;
+  }
+
+  .sounds .card {
+    margin: 0.5rem;
+    width: clamp(7rem, 6rem + 5vw, 15rem);
+    height: clamp(7rem, 6rem + 5vh, 15rem);
+  }
+
+  svg {
+    width: clamp(3rem, 2rem + 5vw, 5rem);
+    height: clamp(3rem, 2rem + 5vh, 5rem);
+  }
+
+  .sounds .card input[type='range'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: clamp(3rem, 1rem + 10vw, 5rem);
+    height: clamp(0.5rem, 0.5rem + 5vh, 0.1rem);
+  }
+
+  .sounds .card input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: clamp(0.5rem, 0.5rem + 2vw, 1.5rem);
+    height: clamp(0.5rem, 0.3rem + 2vh, 1.5rem);
+  }
+
+  .sounds .card input[type='range']::-moz-range-thumb {
+    -moz-appearance: none;
+    width: clamp(0.5rem, 0.5rem + 2vw, 1.5rem);
+    height: clamp(0.5rem, 0.3rem + 2vh, 1.5rem);
+  }
+
+  .sounds .card input[type='range']::-ms-thumb {
+    width: clamp(0.5rem, 0.5rem + 2vw, 1.5rem);
+    height: clamp(0.5rem, 0.3rem + 2vh, 1.5rem);
   }
 }

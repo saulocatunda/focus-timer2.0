@@ -44,8 +44,7 @@ main {
 }
 
 .timer span {
-  /* font-size: 12.6rem; */
-  font-size: calc(8vw + 5vh);
+  font-size: 12rem;
   line-height: 15rem;
   color: var(--textBlack-color);
 }
@@ -254,6 +253,8 @@ body.darkTheme .card input[type='range']::-webkit-slider-thumb {
 
   main {
     display: grid;
+    padding-top: clamp(9rem, 7rem + 15vh, 25rem);
+    align-content: space-around;
     height: clamp(9rem, 7rem + 10vh, 10rem);
     justify-items: center;
     align-items: center;
@@ -263,8 +264,13 @@ body.darkTheme .card input[type='range']::-webkit-slider-thumb {
   main span {
     text-align: center;
   }
+
+  .timer .clock span {
+    font-size: clamp(5rem, 2rem + 10vh, 8rem);
+  }
+
   .clock {
-    height: clamp(7rem, 5rem + 10vh, 10rem);
+    height: clamp(9rem, 5rem + 10vh, 10rem);
   }
   .timer {
     text-align: center;

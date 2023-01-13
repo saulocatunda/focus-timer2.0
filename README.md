@@ -14,5 +14,6 @@
 > - addEventListener
 > - DarkMode
 > - Volume - Range-Input (Sound)
+> - Mobile Responsive Display
 
 [Experimente - Clicando aqui.](https://saulocatunda.github.io/focus-timer2.0/)
